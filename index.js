@@ -14,6 +14,9 @@ app.get("/data", (req, res) => {
 app.get("/about", (req, res) => {
   res.send({ message: "success", data: { name: "About" } });
 });
-app.listen(port, () => {
+app.get("/home", (req, res) => {
+  res.send({ message: "success", data: { name: "Home" } });
+});
+app.listen(process.env.PORT || 3010, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
